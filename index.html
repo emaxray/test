@@ -853,6 +853,120 @@
             50% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
             100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); }
         }
+         /* Section Cards */
+        .sections-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 20px;
+        }
+        
+        .section-card {
+            background: linear-gradient(135deg, #3a2418 0%, #2a1810 50%, #4a3428 100%);
+            border: 3px solid #8b6914;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+            min-height: 250px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .section-card:hover::before {
+            opacity: 1;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7), 0 0 30px rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
+        }
+        
+        .section-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            display: block;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+        }
+        
+        .section-title {
+            font-family: 'Uncial Antiqua', cursive;
+            font-size: 32px;
+            color: #f4e4bc;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .section-description {
+            font-size: 16px;
+            color: #b8860b;
+            line-height: 1.6;
+        }
+        
+        /* Decorative elements */
+        .section-card::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M15,5 L20,15 L15,25 L10,15 Z' fill='none' stroke='%238b6914' stroke-width='1' opacity='0.3'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 0 60px;
+                padding: 20px 10px;
+            }
+            
+            .library-title {
+                font-size: 32px;
+            }
+            
+            .sections-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .section-card {
+                min-height: 200px;
+                padding: 30px;
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes goldenGlow {
+            0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); }
+            50% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
+            100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); }
+        }
     </style>
 </head>
 <body>
