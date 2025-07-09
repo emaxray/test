@@ -724,8 +724,20 @@
             color: #b8860b;
             font-style: italic;
         }
+
+        /* ======================
+           🏠 MAIN CONTENT AREA
+           ====================== 
+           
+           PURPOSE: Primary content display area
+           CUSTOMIZE: Layout, spacing, title styling
+           
+           Structure:
+           - Title and subtitle
+           - Content containers (books, sections, etc.)
+           - Responsive margins for sidebars
+        */
         
-        /* Main Content */
         .main-content {
             flex: 1;
             padding: 20px 10px;
@@ -1372,7 +1384,7 @@
             gap: 2px;
         }
         
-        .points-btn {
+        .conquest-points-btn {
             background: rgba(212, 175, 55, 0.3);
             border: 1px solid #d4af37;
             color: #d4af37;
@@ -1388,7 +1400,7 @@
             padding: 0;
         }
         
-        .points-btn:hover {
+        .conquest-points-btn:hover {
             background: #d4af37;
             color: #1a0f0a;
         }
@@ -2413,9 +2425,9 @@
                                                     <span class="coin-icon" style="width: 12px; height: 12px; font-size: 8px;"></span>
                                                 </span>
                                                 <div class="points-controls">
-                                                    <button class="points-btn" onclick="updatePoints('${key}', ${idx}, -10)">-</button>
-                                                    <button class="points-btn" onclick="updatePoints('${key}', ${idx}, 10)">+</button>
-                                                    <button class="points-btn" style="background: rgba(139, 20, 20, 0.3); border-color: #8b4514; font-size: 10px;" onclick="removeStudent('${key}', ${idx})" title="Remove">×</button>
+                                                    <button class="conquest-points-btn" onclick="updatePoints('${key}', ${idx}, -10)">-</button>
+                                                    <button class="conquest-points-btn" onclick="updatePoints('${key}', ${idx}, 10)">+</button>
+                                                    <button class="conquest-points-btn" style="background: rgba(139, 20, 20, 0.3); border-color: #8b4514; font-size: 10px;" onclick="removeStudent('${key}', ${idx})" title="Remove">×</button>
                                                 </div>
                                             </div>
                                         </div>
