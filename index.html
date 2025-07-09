@@ -110,10 +110,8 @@
             transform: scale(-1, -1);
         }
     
-        
-   
 // UI button style //
-        /* Back Button */
+      // Back Button //
         .back-button {
             position: fixed;
             top: 20px;
@@ -144,7 +142,7 @@
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
         }
         
-        /* Left Sidebar */
+      // Left Sidebar //
         .left-sidebar {
             width: 250px;
             background: linear-gradient(180deg, #2a1810 0%, #1a0f0a 100%);
@@ -174,6 +172,37 @@
         
         .left-sidebar.expanded {
             transform: translateX(0);
+        }
+
+         // Right Sidebar //
+        .right-sidebar {
+            width: 350px;
+            background: linear-gradient(180deg, #2a1810 0%, #1a0f0a 100%);
+            border-left: 2px solid #8b6914;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+            z-index: 100;
+            transform: translateX(350px);
+        }
+        
+        .right-sidebar.expanded {
+            transform: translateX(0);
+        }
+        
+        .points-title {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f4e4bc;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            border-bottom: 1px solid #8b6914;
+            padding-bottom: 15px;
         }
         
         /* Sidebar Toggle Buttons */
@@ -338,38 +367,7 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
             flex: 1;
         }
-        
-        /* Right Sidebar */
-        .right-sidebar {
-            width: 350px;
-            background: linear-gradient(180deg, #2a1810 0%, #1a0f0a 100%);
-            border-left: 2px solid #8b6914;
-            box-shadow: -2px 0 10px rgba(0,0,0,0.5);
-            position: fixed;
-            right: 0;
-            top: 0;
-            height: 100vh;
-            overflow-y: auto;
-            transition: transform 0.3s ease;
-            z-index: 100;
-            transform: translateX(350px);
-        }
-        
-        .right-sidebar.expanded {
-            transform: translateX(0);
-        }
-        
-        .points-title {
-            font-family: 'Cinzel', serif;
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #f4e4bc;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-            border-bottom: 1px solid #8b6914;
-            padding-bottom: 15px;
-        }
-        
+       
         /* Add Student Section */
         .add-student-section {
             background: rgba(139, 105, 20, 0.2);
@@ -586,7 +584,7 @@
             font-style: italic;
         }
         
-        /* Main Content */
+  // Main Content //
         .main-content {
             flex: 1;
             padding: 40px 20px;
