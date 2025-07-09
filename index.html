@@ -36,6 +36,7 @@
                 radial-gradient(ellipse at bottom, #1a0f0a, transparent);
             overflow-x: hidden;
             position: relative;
+            font-size: 12px;
         }
 
         /* ======================
@@ -158,19 +159,20 @@
             font-family: 'Cinzel', serif;             /* CUSTOMIZE: Font */
             font-size: 16px;                          /* CUSTOMIZE: Font size */
             font-weight: 600;
+                 text-decoration: none;
             cursor: pointer;
             transition: all 0.3s ease;
             border-radius: 5px;
-            z-index: 200;
+            z-index: 100;
             display: flex;
             align-items: center;
             gap: 8px;
         }
         
-        .back-button::before {
+/*         .back-button::before {
             content: '←';                              /* CUSTOMIZE: Back arrow icon */
-            font-size: 20px;
-        }
+/*             font-size: 20px;
+        } */
         
         .back-button:hover {
             background: rgba(212, 175, 55, 0.4);      /* CUSTOMIZE: Hover background */
@@ -286,7 +288,7 @@
             top: 0;
             height: 100vh;
             transition: transform 0.3s ease;
-            z-index: 100;
+            z-index: 200;
             transform: translateX(-250px);             /* Hidden by default */
         }
         
@@ -400,8 +402,9 @@
         }
         
         .nav-item.active {
-            background: rgba(212, 175, 55, 0.4);       /* CUSTOMIZE: Active item style */
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.4) 0%, rgba(139, 32, 32, 0.3) 100%);
             border-color: #f4e4bc;
+            box-shadow: inset 0 0 10px rgba(139, 32, 32, 0.5);
         }
         
         .sidebar-title {
@@ -597,23 +600,41 @@
         }
         
         /* Points button - shows current points and adds more when clicked */
-        .points-btn {
+/*         .points-btn {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 20px;                        /* CUSTOMIZE: Button padding */
+            gap: 10px;
+            padding: 12px 12px;                        / CUSTOMIZE: Button padding /
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(180, 140, 40, 0.4) 100%);
-            border: 2px solid #d4af37;
-            border-radius: 30px;                       /* CUSTOMIZE: Button roundness */
+            border: 1px solid #d4af37;
+            border-radius: 30px;                       / CUSTOMIZE: Button roundness /
             cursor: pointer;
             transition: all 0.3s ease;
             min-height: 50px;
-            min-width: 100px;
+            min-width: 70px;
             font-family: 'Cinzel', serif;
-            font-size: 18px;                           /* CUSTOMIZE: Font size */
+            font-size: 18px;                           / CUSTOMIZE: Font size /
             font-weight: bold;
             color: #f4e4bc;
-        }
+        } */
+
+        .points-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;                                  /* Reduced from 10px */
+    padding: 8px 14px;                         /* Reduced from 12px 12px */
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(180, 140, 40, 0.4) 100%);
+    border: 1px solid #d4af37;
+    border-radius: 20px;                       /* Reduced from 30px */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 36px;                          /* Reduced from 50px */
+    min-width: 60px;                           /* Reduced from 70px */
+    font-family: 'Cinzel', serif;
+    font-size: 14px;                           /* Reduced from 18px */
+    font-weight: bold;
+    color: #f4e4bc;
+}
         
         .points-btn:hover {
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.5) 0%, rgba(180, 140, 40, 0.6) 100%);
@@ -626,15 +647,15 @@
         }
         
         .points-value {
-            font-size: 20px;                           /* CUSTOMIZE: Points number size */
+            font-size: 16px;                           /* CUSTOMIZE: Points number size */
             min-width: 40px;
             text-align: center;
         }
         
         /* Coin icon - decorative gold coin */
         .coin-icon {
-            width: 24px;                               /* CUSTOMIZE: Coin size */
-            height: 24px;
+            width: 12px;                               /* CUSTOMIZE: Coin size */
+            height: 12px;
             background: radial-gradient(circle, #ffd700, #b8860b);
             border-radius: 50%;
             display: inline-block;
@@ -650,7 +671,7 @@
             transform: translate(-50%, -50%);
             color: #8b4513;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 7px;
         }
         
         /* Remove student button */
