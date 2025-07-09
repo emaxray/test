@@ -600,23 +600,41 @@
         }
         
         /* Points button - shows current points and adds more when clicked */
-        .points-btn {
+/*         .points-btn {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 12px;                        /* CUSTOMIZE: Button padding */
+            padding: 12px 12px;                        / CUSTOMIZE: Button padding /
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(180, 140, 40, 0.4) 100%);
             border: 1px solid #d4af37;
-            border-radius: 30px;                       /* CUSTOMIZE: Button roundness */
+            border-radius: 30px;                       / CUSTOMIZE: Button roundness /
             cursor: pointer;
             transition: all 0.3s ease;
             min-height: 50px;
             min-width: 70px;
             font-family: 'Cinzel', serif;
-            font-size: 18px;                           /* CUSTOMIZE: Font size */
+            font-size: 18px;                           / CUSTOMIZE: Font size /
             font-weight: bold;
             color: #f4e4bc;
-        }
+        } */
+
+        .points-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;                                  /* Reduced from 10px */
+    padding: 8px 14px;                         /* Reduced from 12px 12px */
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(180, 140, 40, 0.4) 100%);
+    border: 1px solid #d4af37;
+    border-radius: 20px;                       /* Reduced from 30px */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 36px;                          /* Reduced from 50px */
+    min-width: 60px;                           /* Reduced from 70px */
+    font-family: 'Cinzel', serif;
+    font-size: 14px;                           /* Reduced from 18px */
+    font-weight: bold;
+    color: #f4e4bc;
+}
         
         .points-btn:hover {
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.5) 0%, rgba(180, 140, 40, 0.6) 100%);
