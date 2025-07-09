@@ -1315,7 +1315,7 @@
             transform: translateY(-1px);
         }
         
-        .student-info {
+        .conquest-student-info {
             display: flex;
             align-items: center;
             gap: 5px;
@@ -2399,7 +2399,7 @@
                                 if (student.name === 'Donation') {
                                     return `
                                         <div class="${itemClass}" style="grid-column: span 2;">
-                                            <div class="student-info">
+                                            <div class="conquest-student-info">
                                                 <span class="rank-icon">${getRankIcon('Treasury')}</span>
                                                 <span class="student-name" style="font-weight: bold; color: #ffd700;">Team Treasury</span>
                                             </div>
@@ -2414,7 +2414,7 @@
                                 } else {
                                     return `
                                         <div class="${itemClass}">
-                                            <div class="student-info">
+                                            <div class="conquest-student-info">
                                                 <span class="student-rank rank-icon" onclick="updateRank('${key}', ${idx})" title="Click to change rank">
                                                     ${getRankIcon(studentRank)}
                                                 </span>
